@@ -1,6 +1,6 @@
 import "./styles.css";
 import { Project, displayProjects } from "./project.js";
-import { toDo, displayToDos, getTaskDetails } from "./todos.js";
+import { toDo, displayToDos, createToDo } from "./todos.js";
 
 const addTaskPopUp = document.querySelector(".task-details");
 const addTaskButton = document.querySelector(".add-task-container");
@@ -42,6 +42,7 @@ closeTaskPopUpButton.addEventListener("click", () => {
 
 submitTaskDetails.addEventListener("click", (event) => {
   event.preventDefault();
-  getTaskDetails();
+  let newToDo = createToDo();
+  console.log(newToDo);
   addTaskPopUp.close();
 });
