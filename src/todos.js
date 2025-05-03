@@ -16,6 +16,7 @@ export class toDo {
 }
 
 export function displayToDos(toDos) {
+  toDosContainer.textContent = "";
   for (const task of toDos) {
     let taskContainer = document.createElement("div");
     console.log(task);

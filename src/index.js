@@ -6,10 +6,6 @@ const addTaskPopUp = document.querySelector(".task-details");
 const addTaskButton = document.querySelector(".add-task-container");
 const closeTaskPopUpButton = document.querySelector("#closeTaskDetails");
 const submitTaskDetails = document.querySelector("#submitTaskDetails");
-// Default Projects
-// new Project("Home");
-// new Project("My Work");
-// new Project("Startup");
 
 let userProjects = [
   new Project("Home"),
@@ -17,18 +13,14 @@ let userProjects = [
   new Project("Startup"),
 ];
 
-// testing to-dos class and display
-// let userToDosTest = [
-//   new toDo("Write Some Code", "dummy-text", "dummy-text", "dummy-text"),
-//   new toDo("Turn in Project", "dummy-text", "dummy-text", "dummy-text"),
-//   new toDo("Buy Snacks", "dummy-text", "dummy-text", "dummy-text"),
-// ];
 let currentProjectIndex = 0;
 let projectRef = userProjects[currentProjectIndex].tasks;
 projectRef.push(
   new toDo("Write Some Code", "dummy-text", "dummy-text", "dummy-text")
 );
-
+projectRef.push(
+  new toDo("Buy Groceries", "dummy-text", "dummy-text", "dummy-text")
+);
 displayProjects(userProjects);
 displayToDos(userProjects[currentProjectIndex].tasks);
 
@@ -43,6 +35,11 @@ closeTaskPopUpButton.addEventListener("click", () => {
 submitTaskDetails.addEventListener("click", (event) => {
   event.preventDefault();
   let newToDo = createToDo();
+  // TODO: Form validation before creating object and appending
+
+  userProjects[currentProjectIndex].tasks.push(newToDo);
+  displayToDos(userProjects[currentProjectIndex].tasks);
+
   console.log(newToDo);
   addTaskPopUp.close();
 });
