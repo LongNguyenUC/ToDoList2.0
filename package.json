@@ -13,5 +13,19 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
     "deploy": "git subtree push --prefix dist origin gh-pages"
-  }
+  },
+  "name": "todolist2.0",
+  "version": "1.0.0",
+  "main": "webpack.common.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LongNguyenUC/ToDoList2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LongNguyenUC/ToDoList2.0/issues"
+  },
+  "homepage": "https://github.com/LongNguyenUC/ToDoList2.0#readme",
+  "description": ""
 }
