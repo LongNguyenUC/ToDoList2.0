@@ -1,6 +1,8 @@
 const toDosContainer = document.querySelector(".to-dos");
 const addTaskButton = document.querySelector(".add-task-container");
 
+const nameOfTask = document.querySelector("#nameOfTask");
+
 export class toDo {
   constructor(title, description, dueDate, priority) {
     this.title = title;
@@ -20,4 +22,6 @@ export function displayToDos(toDos) {
   }
 }
 
-export function getTaskDetails() {}
+export function getTaskDetails() {
+  console.log(nameOfTask.value);
+}
