@@ -1,6 +1,7 @@
 import "./styles.css";
 import { Project, displayProjects } from "./project.js";
 import { toDo, displayToDos, createToDo } from "./todos.js";
+import currentlyClickedProjectID from "./project.js";
 
 const addTaskPopUp = document.querySelector(".task-details");
 const addTaskButton = document.querySelector(".add-task-container");
@@ -14,13 +15,7 @@ let userProjects = [
 ];
 
 let currentProjectIndex = 0;
-let projectRef = userProjects[currentProjectIndex].tasks;
-projectRef.push(
-  new toDo("Write Some Code", "dummy-text", "dummy-text", "dummy-text")
-);
-projectRef.push(
-  new toDo("Buy Groceries", "dummy-text", "dummy-text", "dummy-text")
-);
+
 displayProjects(userProjects);
 displayToDos(userProjects[currentProjectIndex].tasks);
 

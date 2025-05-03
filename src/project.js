@@ -1,9 +1,13 @@
 const projectsContainer = document.querySelector(".Projects");
 
+let currentlyClickedProjectID = 0;
+export default currentlyClickedProjectID;
+
 export class Project {
   constructor(name) {
     this.name = name;
     this.tasks = [];
+    this.projectID = crypto.randomUUID();
   }
 }
 
@@ -14,6 +18,10 @@ export function displayProjects(Projects) {
     title.textContent = Projects[Pro].name;
     titleContainer.appendChild(title);
 
+    titleContainer.addEventListener("click", () => {
+      currentlyClickedProjectID = Projects[Pro].projectID;
+      console.log(currentlyClickedProjectID);
+    });
     projectsContainer.appendChild(titleContainer);
   }
 }
