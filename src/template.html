@@ -32,8 +32,15 @@
       <dialog class="task-details">
         <button type="button" id="closeTaskDetails">X</button>
         <form action="">
-          <label for="nameOfTask">Name of Task</label>
-          <input type="text" id="nameOfTask" />
+          <input type="text" id="nameOfTask" placeholder="Task name" />
+          <input type="text" id="descOfTask" placeholder="Description" />
+          <input type="date" id="dueDateOfTask" />
+          <select name="" id="priorityOfTask">
+            <option value="">Low</option>
+            <option value="">Moderate</option>
+            <option value="">High</option>
+            <option value="">Urgent</option>
+          </select>
           <button id="submitTaskDetails">Add Task</button>
         </form>
       </dialog>
