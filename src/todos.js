@@ -1,4 +1,4 @@
-const toDosContainer = document.querySelector(".to-dos");
+const toDosContainer = document.querySelector(".display-of-all-to-dos");
 const addTaskButton = document.querySelector(".add-task-container");
 
 const nameOfTask = document.querySelector("#nameOfTask");
@@ -21,7 +21,7 @@ export function displayToDos(toDos) {
     console.log(task);
     taskContainer.textContent = task.title;
 
-    toDosContainer.insertBefore(taskContainer, addTaskButton);
+    toDosContainer.appendChild(taskContainer);
   }
 }
 
