@@ -19,3 +19,5 @@ export function displayToDos(toDos) {
     toDosContainer.insertBefore(taskContainer, addTaskButton);
   }
 }
+
+export function getTaskDetails() {}
