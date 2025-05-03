@@ -5,6 +5,7 @@ import { toDo, displayToDos } from "./todos.js";
 const addTaskPopUp = document.querySelector(".task-details");
 const addTaskButton = document.querySelector(".add-task-container");
 const closeTaskPopUpButton = document.querySelector("#closeTaskDetails");
+const submitTaskDetails = document.querySelector("#submitTaskDetails");
 // Default Projects
 // new Project("Home");
 // new Project("My Work");
@@ -36,5 +37,12 @@ addTaskButton.addEventListener("click", () => {
 });
 
 closeTaskPopUpButton.addEventListener("click", () => {
+  addTaskPopUp.close();
+});
+
+submitTaskDetails.addEventListener("click", (event) => {
+  event.preventDefault();
+  //TODO: create to do object and append to project tasks
+
   addTaskPopUp.close();
 });
