@@ -19,8 +19,14 @@ export function displayToDos(toDos) {
   toDosContainer.textContent = "";
   for (const task of toDos) {
     let taskContainer = document.createElement("div");
-    console.log(task);
-    taskContainer.textContent = task.title;
+    let checkBox = document.createElement("div");
+    checkBox.textContent = "✔";
+    taskContainer.appendChild(checkBox);
+
+    let displayOfTaskName = document.createElement("div");
+    displayOfTaskName.textContent = task.title;
+    taskContainer.appendChild(displayOfTaskName);
+    taskContainer.classList.add("task-container");
 
     toDosContainer.appendChild(taskContainer);
   }
