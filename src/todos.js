@@ -20,7 +20,11 @@ export function displayToDos(toDos) {
   for (const task of toDos) {
     let taskContainer = document.createElement("div");
     let checkBox = document.createElement("div");
-    checkBox.textContent = "✔";
+    checkBox.classList.add("checkBox");
+
+    let checkBoxIcon = document.createElement("span");
+    checkBoxIcon.textContent = "✔";
+    checkBox.appendChild(checkBoxIcon);
     taskContainer.appendChild(checkBox);
 
     let displayOfTaskName = document.createElement("div");

@@ -115,4 +115,26 @@ h2 {
 .task-container {
   display: flex;
   gap: 1.25rem;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #3c3a39;
+}
+
+.checkBox {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkBox > span {
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.checkBox > span:hover {
+  opacity: 1;
 }
