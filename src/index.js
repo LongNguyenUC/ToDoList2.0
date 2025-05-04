@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Project, displayProjects } from "./project.js";
+import { Project, displayProjects, referenceArray } from "./project.js";
 import { toDo, displayToDos, createToDo } from "./todos.js";
 import currentlyClickedProjectID from "./project.js";
 
@@ -17,7 +17,6 @@ let userProjects = [
 let currentProjectIndex = 0;
 
 displayProjects(userProjects);
-displayToDos(userProjects[currentProjectIndex].tasks);
 
 addTaskButton.addEventListener("click", () => {
   addTaskPopUp.showModal();
@@ -32,8 +31,10 @@ submitTaskDetails.addEventListener("click", (event) => {
   let newToDo = createToDo();
   // TODO: Form validation before creating object and appending
 
-  userProjects[currentProjectIndex].tasks.push(newToDo);
-  displayToDos(userProjects[currentProjectIndex].tasks);
+  // userProjects[currentProjectIndex].tasks.push(newToDo);
+  // displayToDos(userProjects[currentProjectIndex].tasks);
+  referenceArray.push(newToDo);
+  displayToDos(referenceArray);
 
   console.log(newToDo);
   addTaskPopUp.close();

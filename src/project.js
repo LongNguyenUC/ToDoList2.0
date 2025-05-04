@@ -1,13 +1,15 @@
-const projectsContainer = document.querySelector(".Projects");
+import { displayToDos } from "./todos";
 
+const projectsContainer = document.querySelector(".Projects");
 let currentlyClickedProjectID = 0;
+export let referenceArray = undefined;
+
 export default currentlyClickedProjectID;
 
 export class Project {
-  constructor(name) {
+  constructor(name, index) {
     this.name = name;
     this.tasks = [];
-    this.projectID = crypto.randomUUID();
   }
 }
 
@@ -20,6 +22,8 @@ export function displayProjects(Projects) {
 
     titleContainer.addEventListener("click", () => {
       currentlyClickedProjectID = Projects[Pro].projectID;
+      displayToDos(Projects[Pro].tasks);
+      referenceArray = Projects[Pro].tasks;
       console.log(currentlyClickedProjectID);
     });
     projectsContainer.appendChild(titleContainer);
