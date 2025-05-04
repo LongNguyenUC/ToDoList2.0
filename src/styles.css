@@ -2,32 +2,45 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  border: 1px solid red;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  color: #3c3a39;
 }
 
 body {
-  padding: 15px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
   height: 100vh;
+  padding: 15px;
   background-color: #e9e9e9;
+}
+
+.app-wrapper-tmp {
+  display: grid;
+  border-collapse: separate;
+  grid-template-columns: 1fr 3fr;
+  border: 1px solid #e9e1dd;
+  border-radius: 10px;
+  height: calc(100vh - (15px * 2));
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.projects-section {
+  background-color: #fcfaf8;
 }
 
 ul {
   list-style: none;
 }
 
-li {
-  padding: 0 10px;
-}
-
 .Projects-Header {
-  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .add-task-container {
@@ -44,4 +57,40 @@ li {
   margin: 10vh auto;
   height: 300px;
   width: 450px;
+}
+
+.to-dos-section {
+  background-color: white;
+  padding: 10px;
+}
+
+.add-projects-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.Projects-Header:hover {
+  transition: background-color 0.1s ease-in-out;
+  background-color: #eeece8;
+  .add-projects-button {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
+.project-name {
+  padding: 2px 0px 2px 1.2rem;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.project-name:hover {
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+  background-color: #eeece8;
 }

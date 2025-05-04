@@ -6,45 +6,37 @@
     <title>To Do List</title>
   </head>
   <body>
-    <section class="projects">
-      <div class="Projects-Header">
-        <h2>My Projects</h2>
-        <button class="add-projects-button" type="button">+</button>
-      </div>
-      <ul class="Projects">
-        <!-- <li>
-          <h3>Home</h3>
-        </li>
-        <li>
-          <h3>My Work</h3>
-        </li>
-        <li>
-          <h3>Statup</h3>
-        </li> -->
-      </ul>
-    </section>
-    <section class="to-dos">
-      <h2>My Projects /</h2>
-      <div class="display-of-all-to-dos"></div>
-      <div class="add-task-container">
-        <span id="add-task-icon">+</span>
-        <span id="add-task-title">Add Task</span>
-      </div>
-      <dialog class="task-details">
-        <button type="button" id="closeTaskDetails">X</button>
-        <form action="">
-          <input type="text" id="nameOfTask" placeholder="Task name" />
-          <input type="text" id="descOfTask" placeholder="Description" />
-          <input type="date" id="dueDateOfTask" />
-          <select name="" id="priorityOfTask">
-            <option>Low</option>
-            <option>Moderate</option>
-            <option>High</option>
-            <option>Urgent</option>
-          </select>
-          <button id="submitTaskDetails">Add Task</button>
-        </form>
-      </dialog>
-    </section>
+    <div class="app-wrapper-tmp">
+      <section class="projects-section">
+        <div class="Projects-Header">
+          <h2>My Projects</h2>
+          <button class="add-projects-button" type="button">+</button>
+        </div>
+        <ul class="Projects"></ul>
+      </section>
+      <section class="to-dos-section">
+        <h2>My Projects/</h2>
+        <div class="display-of-all-to-dos"></div>
+        <div class="add-task-container">
+          <span id="add-task-icon">+</span>
+          <span id="add-task-title">Add Task</span>
+        </div>
+        <dialog class="task-details">
+          <button type="button" id="closeTaskDetails">X</button>
+          <form action="">
+            <input type="text" id="nameOfTask" placeholder="Task name" />
+            <input type="text" id="descOfTask" placeholder="Description" />
+            <input type="date" id="dueDateOfTask" />
+            <select name="" id="priorityOfTask">
+              <option>Low</option>
+              <option>Moderate</option>
+              <option>High</option>
+              <option>Urgent</option>
+            </select>
+            <button id="submitTaskDetails">Add Task</button>
+          </form>
+        </dialog>
+      </section>
+    </div>
   </body>
 </html>

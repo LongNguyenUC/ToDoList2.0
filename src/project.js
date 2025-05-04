@@ -16,6 +16,8 @@ export function displayProjects(Projects) {
     let titleContainer = document.createElement("li");
     let title = document.createElement("h3");
     title.textContent = Projects[Pro].name;
+    titleContainer.classList.add("project-name");
+
     titleContainer.appendChild(title);
 
     titleContainer.addEventListener("click", () => {
