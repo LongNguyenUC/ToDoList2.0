@@ -2,6 +2,7 @@ import { displayToDos } from "./todos";
 const addTaskButton = document.querySelector(".add-task-container");
 const projectsContainer = document.querySelector(".Projects");
 const directory = document.querySelector(".directory");
+const homeimage = document.querySelector(".image-container");
 export let referenceArray = undefined;
 
 export class Project {
@@ -25,6 +26,7 @@ export function displayProjects(Projects) {
       displayToDos(Projects[Pro].tasks);
       directory.textContent = Projects[Pro].name;
       addTaskButton.style.visibility = "visible";
+      homeimage.style.display = "none";
       referenceArray = Projects[Pro].tasks;
     });
     projectsContainer.appendChild(titleContainer);
