@@ -1,6 +1,7 @@
 import { displayToDos } from "./todos";
 
 const projectsContainer = document.querySelector(".Projects");
+const directory = document.querySelector(".directory");
 export let referenceArray = undefined;
 
 export class Project {
@@ -22,6 +23,7 @@ export function displayProjects(Projects) {
 
     titleContainer.addEventListener("click", () => {
       displayToDos(Projects[Pro].tasks);
+      directory.textContent = Projects[Pro].name;
       referenceArray = Projects[Pro].tasks;
     });
     projectsContainer.appendChild(titleContainer);
