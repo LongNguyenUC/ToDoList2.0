@@ -28,6 +28,11 @@ export function displayToDos(toDos) {
     taskContainer.appendChild(displayOfTaskName);
     taskContainer.classList.add("task-container");
 
+    checkBox.addEventListener("click", () => {
+      taskContainer.remove();
+      let index = toDos.indexOf(task);
+      toDos.splice(index, 1);
+    });
     toDosContainer.appendChild(taskContainer);
   }
 }
