@@ -9,10 +9,9 @@ const submitTaskDetails = document.querySelector("#submitTaskDetails");
 const addNewProjectButton = document.querySelector(".add-projects-button");
 
 let userProjects = [new Project("Home"), new Project("My Work")];
-
-let currentProjectIndex = 0;
-
 displayProjects(userProjects);
+
+addTaskButton.style.visibility = "hidden";
 
 addTaskButton.addEventListener("click", () => {
   addTaskPopUp.showModal();
@@ -26,9 +25,6 @@ submitTaskDetails.addEventListener("click", (event) => {
   event.preventDefault();
   let newToDo = createToDo();
   // TODO: Form validation before creating object and appending
-
-  // userProjects[currentProjectIndex].tasks.push(newToDo);
-  // displayToDos(userProjects[currentProjectIndex].tasks);
   referenceArray.push(newToDo);
   displayToDos(referenceArray);
 

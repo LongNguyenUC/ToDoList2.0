@@ -1,5 +1,5 @@
 import { displayToDos } from "./todos";
-
+const addTaskButton = document.querySelector(".add-task-container");
 const projectsContainer = document.querySelector(".Projects");
 const directory = document.querySelector(".directory");
 export let referenceArray = undefined;
@@ -24,6 +24,7 @@ export function displayProjects(Projects) {
     titleContainer.addEventListener("click", () => {
       displayToDos(Projects[Pro].tasks);
       directory.textContent = Projects[Pro].name;
+      addTaskButton.style.visibility = "visible";
       referenceArray = Projects[Pro].tasks;
     });
     projectsContainer.appendChild(titleContainer);

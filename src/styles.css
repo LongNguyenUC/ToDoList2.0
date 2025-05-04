@@ -94,3 +94,20 @@ h2 {
   transition: background-color 0.1s ease-in-out;
   background-color: #eeece8;
 }
+
+.image-container {
+  height: calc(100% - 64px);
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clipboard {
+  height: 300px;
+}
+
+.image-container > p {
+  width: 200px;
+  text-align: center;
+}
