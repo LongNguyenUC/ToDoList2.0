@@ -6,7 +6,7 @@ const homeimage = document.querySelector(".image-container");
 export let referenceArray = undefined;
 
 export class Project {
-  constructor(name, index) {
+  constructor(name) {
     this.name = name;
     this.tasks = [];
   }
